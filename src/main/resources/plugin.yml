@@ -1,0 +1,17 @@
+name: SteelBastionEvent
+version: 1.0
+main: primest.steelbastionevent.SteelBastionEvent
+api-version: 1.16
+depend: [WorldEdit, WorldGuard]
+softdepend:
+  - ItemNBTAPI
+  - DecentHolograms
+
+commands:
+  sbe:
+    usage: /sbe <start|stop|lootgui>
+    permission: sbe.admin
+
+permissions:
+  sbe.admin:
+    default: op

@@ -1,0 +1,148 @@
+world: world
+
+auto-event:
+  enabled: true
+  interval-seconds: 7200 # 4 часа
+
+
+coords:
+  min: -2000
+  max: 2000
+
+schematic:
+  name: bastion.schem
+  paste-air: false
+
+chest:
+  open-delay: 10
+  auto-stop-if-not-opened: true
+  explosion:
+    radius: 12.0
+    damage: 5.0
+
+loot:
+  drop-delay-ticks: 15
+
+effects:
+  radius: 20
+  slow:
+    level: 3
+    duration: 30
+  damage-at-50-sec: 4
+
+sounds:
+  start: ITEM_TOTEM_USE
+  open: BLOCK_CHEST_OPEN
+  wave: ENTITY_ELDER_GUARDIAN_CURSE
+  damage: ENTITY_IRON_GOLEM_HURT
+  stop: BLOCK_GRASS_PLACE
+  chest-wait:
+    sound: ENTITY_VILLAGER_NO
+    volume: 1.0
+    pitch: 1.0
+
+ground-prepare:
+  enabled: false
+  radius: 8
+  fill-material: DIRT
+
+region:
+  enabled: true
+  size: 50 # Радиус региона (50 = 100x100 блоков)
+  height: 100 # Высота региона
+  flags:
+    build: DENY
+    block-break: DENY
+    block-place: DENY
+    interact: DENY
+    pvp: ALLOW
+    mob-spawning: DENY
+    creeper-explosion: DENY
+    other-explosion: DENY
+    tnt: DENY
+    lighter: DENY
+    lava-fire: DENY
+    water-flow: DENY
+    lava-flow: DENY
+    pistons: DENY
+    use: ALLOW
+    chest-access: ALLOW
+    ride: ALLOW
+  auto-expand: true
+
+bossbar:
+  enabled: true
+  title-closed: "§x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН &7| &x&E&3&D&D&D&7Стадия: &#FF5555закрыт"
+  title-opening: "§x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН &7| &x&E&3&D&D&D&7Открытие через &a%time% &x&E&3&D&D&D&7сек"
+  title-opened: "§x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН &7| &x&E&3&D&D&D&7Исчезнет через &c%time% &x&E&3&D&D&D&7сек"
+
+  color: GREEN
+  style: SOLID
+
+hologram:
+  closed-idle:
+    - "&#FF5555🔒 Хранилище закрыто"
+    - "&7Нажмите &eЛКМ&7, чтобы начать открытие"
+
+  opening:
+    - "&#FFAA00⏳ Открытие через &c%time% сек"
+    - "&7Бастион пробуждается"
+
+  opened:
+    - "&#55FF55✔ Хранилище открыто"
+    - "&7Бастион пробуждён"
+
+protect:
+  block-place-radius: 50
+
+block-protect:
+  radius: 50
+  message:
+    - "&#97E542&ls&#97E542&lᴛ&#97E542&lᴇ&#97E542&lᴇ&#97E542&lʟ&#97E542&lʀ&#97E542&lɪ&#97E542&ls&#97E542&lᴇ &8»&x&E&3&D&D&D&7 &aХэй!&7 Здесь &cнельзя &7этого делать!"
+
+
+messages:
+  chest-opened: "&#97E542&ls&#97E542&lᴛ&#97E542&lᴇ&#97E542&lᴇ&#97E542&lʟ&#97E542&lʀ&#97E542&lɪ&#97E542&ls&#97E542&lᴇ &8»&x&E&3&D&D&D&7 Игрок &a%player% &x&E&3&D&D&D&7активировал §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН!"
+  fluid-place-deny: "&#97E542&ls&#97E542&lᴛ&#97E542&lᴇ&#97E542&lᴇ&#97E542&lʟ&#97E542&lʀ&#97E542&lɪ&#97E542&ls&#97E542&lᴇ &8»&x&E&3&D&D&D&7 &aХэй!&7 Здесь &cнельзя &7этого делать!"
+  block-place-deny: "&#97E542&ls&#97E542&lᴛ&#97E542&lᴇ&#97E542&lᴇ&#97E542&lʟ&#97E542&lʀ&#97E542&lɪ&#97E542&ls&#97E542&lᴇ &8»&x&E&3&D&D&D&7 &aХэй!&7 Здесь &cнельзя &7этого делать!"
+  chest-wait: "&#97E542&ls&#97E542&lᴛ&#97E542&lᴇ&#97E542&lᴇ&#97E542&lʟ&#97E542&lʀ&#97E542&lɪ&#97E542&ls&#97E542&lᴇ &8»&x&E&3&D&D&D&7 Хранилище сейчас &aоткроется&x&E&3&D&D&D&7, подождите немного..."
+  start:
+    - '          §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН'
+    - ''
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Ивент активирован!'
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Координаты: &#55FF55%x%&x&E&3&D&D&D&7, &#55FF55%y%&x&E&3&D&D&D&7, &#55FF55%z%'
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Успейте активировать бастион,'
+    - ' &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7иначе через &#55FF55&lтри &x&E&3&D&D&D&7минуты он исчезнет'
+    - ''
+
+  opened:
+    - "          §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН"
+    - ""
+    - " &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Хранилище было &x&5&5&F&F&5&5&lо&x&5&5&F&F&5&5&lт&x&5&5&F&F&5&5&lк&x&5&5&F&F&5&5&lр&x&5&5&F&F&5&5&lы&x&5&5&F&F&5&5&lт&x&5&5&F&F&5&5&lо"
+    - " &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Через &#FFD700&lдве &x&E&3&D&D&D&7минуты ивент исчезнет"
+    - " &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7Успейте забрать награду"
+    - ""
+
+
+  stop:
+    - '          §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН'
+    - ''
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Травяной бастион &x&5&5&F&F&5&5&lз&x&5&5&F&F&5&5&lа&x&5&5&F&F&5&5&lв&x&5&5&F&F&5&5&lе&x&5&5&F&F&5&5&lр&x&5&5&F&F&5&5&lш&x&5&5&F&F&5&5&lё&x&5&5&F&F&5&5&lн!'
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Спасибо всем &x&8&6&F&F&0&0&lу&x&8&6&F&F&0&0&lч&x&8&6&F&F&0&0&lа&x&8&6&F&F&0&0&lс&x&8&6&F&F&0&0&lт&x&8&6&F&F&0&0&lн&x&8&6&F&F&0&0&lи&x&8&6&F&F&0&0&lк&x&8&6&F&F&0&0&lа&x&8&6&F&F&0&0&lм &x&E&3&D&D&D&7за участие'
+    - ' &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7Приходи через &x&0&0&9&8&F&F&lчетыре &x&E&3&D&D&D&7часа'
+    - ''
+  finish:
+    - '          §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН'
+    - ''
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Травяной бастион &x&5&5&F&F&5&5&lз&x&5&5&F&F&5&5&lа&x&5&5&F&F&5&5&lв&x&5&5&F&F&5&5&lе&x&5&5&F&F&5&5&lр&x&5&5&F&F&5&5&lш&x&5&5&F&F&5&5&lё&x&5&5&F&F&5&5&lн!'
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Спасибо всем &x&8&6&F&F&0&0&lу&x&8&6&F&F&0&0&lч&x&8&6&F&F&0&0&lа&x&8&6&F&F&0&0&lс&x&8&6&F&F&0&0&lт&x&8&6&F&F&0&0&lн&x&8&6&F&F&0&0&lи&x&8&6&F&F&0&0&lк&x&8&6&F&F&0&0&lа&x&8&6&F&F&0&0&lм &x&E&3&D&D&D&7за участие'
+    - ' &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7Приходи через &x&0&0&9&8&F&F&lчетыре &x&E&3&D&D&D&7часа'
+    - ''
+  auto-stop:
+    - '          §x§0§0§F§F§0§B§lТ§x§1§7§F§F§0§9§lР§x§2§D§F§F§0§8§lА§x§4§4§F§F§0§6§lВ§x§5§B§F§F§0§5§lЯ§x§7§2§F§F§0§3§lН§x§8§8§F§F§0§2§lН§x§9§F§F§F§0§0§lО§x§A§2§F§F§0§0§lЙ §x§A§9§F§F§0§0§lБ§x§A§D§F§F§0§0§lА§x§B§0§F§F§0§0§lС§x§B§4§F§F§0§0§lТ§x§B§7§F§F§0§0§lИ§x§B§B§F§F§0§0§lО§x§B§E§F§F§0§0§lН'
+    - ''
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Хранилище так и не было &x&F&F&6&E&0&0&lо&x&F&F&6&E&0&0&lт&x&F&F&6&E&0&0&lк&x&F&F&6&E&0&0&lр&x&F&F&6>E&0&0&lы&x&F&F&6&E&0&0&lт&x&F&F&6&E&0&0&lо'
+    - ' &x&4&5&F&F&0&0๕ &x&E&3&D&D&D&7Время ожидания истекло'
+    - ' &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7Ивент завершён автоматически'
+    - ' &x&4&5&F&F&0&0໗ &x&E&3&D&D&D&7Приходи через &x&0&0&9&8&F&F&lчетыре &x&E&3&D&D&D&7часа'
+    - ''
